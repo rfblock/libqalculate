@@ -470,7 +470,7 @@ class Calculator {
 	* @returns The result of the calculation.
 	* \since 2.6.0
 	*/
-	std::string calculateAndPrint(std::string str, int msecs = 10000, const EvaluationOptions &eo = default_user_evaluation_options, const PrintOptions &po = default_print_options, std::string *parsed_expression = NULL);
+	std::string calculateAndPrint(std::string str, int msecs = 10000, const EvaluationOptions &eo = default_user_evaluation_options, const PrintOptions &po = default_print_options, std::string *parsed_expression = NULL, MathStructure *out_struct = NULL);
 	/** Calculates an expression.and outputs the result to a text string. The expression should be unlocalized first with unlocalizeExpression().
 	*
 	* Unlike other functions for expression evaluation this function handles ending "to"-commands, in addition to unit conversion, such "to hexadecimal" or to "fractions", similar to the qalc application.
@@ -483,7 +483,7 @@ class Calculator {
 	* @returns The result of the calculation.
 	* \since 4.0.0
 	*/
-	std::string calculateAndPrint(std::string str, int msecs, const EvaluationOptions &eo, const PrintOptions &po, AutomaticFractionFormat auto_fraction, AutomaticApproximation auto_approx = AUTOMATIC_APPROXIMATION_OFF, std::string *parsed_expression = NULL, int max_length = -1, bool *result_is_comparison = NULL, bool format = false, int colorize = 0, int tagtype = TAG_TYPE_HTML);
+	std::string calculateAndPrint(std::string str, int msecs, const EvaluationOptions &eo, const PrintOptions &po, AutomaticFractionFormat auto_fraction, AutomaticApproximation auto_approx = AUTOMATIC_APPROXIMATION_OFF, std::string *parsed_expression = NULL, int max_length = -1, bool *result_is_comparison = NULL, bool format = false, int colorize = 0, int tagtype = TAG_TYPE_HTML, MathStructure *out_struct = NULL);
 	int testCondition(std::string expression);
 	//@}
 
